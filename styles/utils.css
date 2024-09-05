@@ -2,8 +2,15 @@
 /* Containers */
 
 .container-lg > * {
-    max-width: 1024px;
-    margin: 0 auto;
+    max-width: 1024px;  
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container-md > * {
+    max-width: 768px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Flex  */
