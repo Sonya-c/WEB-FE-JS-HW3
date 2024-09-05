@@ -1,0 +1,42 @@
+
+/* Containers */
+
+.container-lg > * {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+/* Flex  */
+.flex {
+    display: flex;
+}
+
+.flex.row {
+    flex-direction: row;
+}
+
+.flex.col {
+    flex-direction: column;
+}
+
+.flex.col.y-center {
+    justify-content: center;
+}
+
+.cols-2 > * {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+/* phones */
+
+@media screen and (max-width: 576px) {
+    .cols-2 > * {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .flex.mobile-col {
+        flex-direction: column;
+    }
+}

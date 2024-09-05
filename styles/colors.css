@@ -11,4 +11,9 @@
     --text-alt-color: #4c526c;
     /* Neutral Colors */
     --lighten-gray: #ededf3;
+    --white: #fff;
+}
+
+body {
+    color: var(--text-color)
 }
