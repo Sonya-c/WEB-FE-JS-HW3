@@ -86,7 +86,7 @@ header .image-container img {
 /* ====== MAIN.POST ======= */
 
 .post-container {
-    padding: 3rem 0;
+    padding: 3rem 1.5rem;
     background-color: var(--background-color-gray);
 }
 
