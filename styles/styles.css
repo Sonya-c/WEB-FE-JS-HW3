@@ -90,24 +90,24 @@ header .image-container img {
     background-color: var(--background-color-gray);
 }
 
-/* Phones */
+/* Phones & Tablets */
 
 @media screen and (max-width: 576px) {
     /* ====== MAIN.HERO ======= */
 
-    main {
+    header {
         padding: 1.5rem;
     }
 
-    main h1 {
+    header h1 {
         font-size: 27px;
     }
 
-    main .hero .content-container {
+    header .hero .content-container {
         order: 2;
     }
 
-    main .hero .image-container {
+    header .hero .image-container {
         order: 1;
     }
 }
