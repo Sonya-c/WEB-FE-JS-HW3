@@ -26,6 +26,10 @@ main .hero {
     gap: 1rem;
 }
 
+main .hero-container {
+    padding: 2rem 1rem;
+}
+
 main .tag {
     display: block;
     background-color: var(--lighten-gray);
