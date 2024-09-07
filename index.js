@@ -31,19 +31,15 @@ function slowTask(milliseconds) {
 }
 
 
-function getPokemon(name) {
-    return fetch(`https://pokeapi.co/api/v2/pokemon/${name}`)
-        .then(response => 
-            logger("example-2-console", response.json(), true)
-        )
-        .catch(error =>
-            logger("example-2-console", error, true)
-        );
-}
+async function getPokemon(name) {
+    const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`)
+    
+    if (!response.ok) 
+        logger("example-3-console", `Error: ${response.status}`, false);
 
-document.querySelector("#example-1-btn").addEventListener("click", () => {
-    slowTask(5000);
-});
+    const data = await response.json();
+    logger("example-3-console", JSON.stringify(data, null, 2), false);
+}
 
 document.querySelector("#example-2-btn").addEventListener("click", () => {
     fetch(`https://pokeapi.co/api/v2/pokemon/psyduck/encounters`)
