@@ -99,6 +99,15 @@ header .image-container img {
     background-color: var(--background-color-gray);
 }
 
+pre {
+    max-height: 300px;
+    overflow: auto;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: var(--lighten-gray);
+    border-left: 2px solid var(--primary-color);
+}
+
 /* Phones & Tablets */
 
 @media screen and (max-width: 576px) {
