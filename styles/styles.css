@@ -22,14 +22,6 @@ body {
     height: 35px;
 }
 
-pre, code {
-    white-space: pre-wrap;       /* Since CSS 2.1 */
-    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
-    white-space: -pre-wrap;      /* Opera 4-6 */
-    white-space: -o-pre-wrap;    /* Opera 7 */
-    word-wrap: break-word;       /* Internet Explorer 5.5+ */
-}
-
 /* ====== header ======= */
 
 header .content-container, 
@@ -99,6 +91,14 @@ header .image-container img {
     background-color: var(--background-color-gray);
 }
 
+pre, code {
+    white-space: pre-wrap;       /* Since CSS 2.1 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+
 pre {
     max-height: 300px;
     overflow: auto;
@@ -108,31 +108,28 @@ pre {
     border-left: 2px solid var(--primary-color);
 }
 
-button.primary {
+button {
     padding: 0.5rem 1rem;
     border: none;
-    border-radius: 5px;
-    background-color: var(--primary-color);
-    color: var(--white);
+    border-radius: 10px;
     font-weight: 600;
     cursor: pointer;
     transition: .3s;
 }
 
+button.primary {    
+    background-color: var(--primary-color);
+    color: var(--white);
+}
 
 button.primary:hover {
     background-color: var(--secondary-color);
 }
 
 button.outline {
-    padding: 0.5rem 1rem;
     border: 2px solid var(--primary-color);
-    border-radius: 5px;
     background-color: var(--white);
     color: var(--primary-color);
-    font-weight: 600;
-    cursor: pointer;
-    transition: .3s;
 }
 
 button.outline:hover {
