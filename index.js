@@ -10,6 +10,15 @@ function logger(id, content, append) {
         element.innerHTML = content;
 }
 
+
+function clearOutput(id) {
+    const element = document.getElementById(id);
+
+    if (!element) return;
+
+    element.innerHTML = "";
+}
+
 function slowTask(milliseconds) {
     const startTime = new Date().getTime();
     let currentTime = startTime;
