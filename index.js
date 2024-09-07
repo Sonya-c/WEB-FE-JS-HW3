@@ -66,3 +66,27 @@ document.querySelector("#example-3-btn").addEventListener("click", () => {
 document.querySelector("#example-4-btn").addEventListener("click", () => {
     getPokemon2("psyduck");
 });
+
+
+let currentStep = 0;
+
+function updateVisual() {
+    document.querySelector("#frame1").style.opacity = 
+        currentStep >= 1 && currentStep < 6 ? 1 : 0;
+    document.querySelector("#frame2").style.opacity =
+        currentStep >= 2 && currentStep < 5 ? 1 : 0;
+    document.querySelector("#frame3").style.opacity =
+        currentStep >= 3 && currentStep < 4 ? 1 : 0;
+
+    document.querySelector("#current-step").innerHTML = currentStep;
+}
+
+function nextStep() {
+    currentStep = (currentStep + 1) % 7;
+    updateVisual();
+}
+
+function prevStep() {
+    currentStep = (currentStep + 1) % 7;
+    updateVisual();
+}
