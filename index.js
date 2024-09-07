@@ -41,8 +41,15 @@ async function getPokemon(name) {
     logger("example-3-console", JSON.stringify(data, null, 2), false);
 }
 
+function getPokemon2(name) {
+    const response = fetch(`https://pokeapi.co/api/v2/pokemon/${name}`)
+    
+    console.log(response);
+    logger("example-4-console", 'Promise { <pending> }', false);
+}
+
 document.querySelector("#example-2-btn").addEventListener("click", () => {
-    fetch(`https://pokeapi.co/api/v2/pokemon/psyduck/encounters`)
+    fetch(`https://pokeapi.co/api/v2/pokemon/psyduck/`)
         .then(response => response.json())
         .then(data => {
             logger("example-2-console", JSON.stringify(data, null, 2), false);
@@ -50,4 +57,12 @@ document.querySelector("#example-2-btn").addEventListener("click", () => {
         .catch(error => {
             logger("example-2-console", error, false);
         });
+});
+
+document.querySelector("#example-3-btn").addEventListener("click", () => {
+    getPokemon("psyduck");
+});
+
+document.querySelector("#example-4-btn").addEventListener("click", () => {
+    getPokemon2("psyduck");
 });
