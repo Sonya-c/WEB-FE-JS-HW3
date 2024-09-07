@@ -104,10 +104,21 @@ pre {
     overflow: auto;
     padding: 1rem;
     border-radius: 10px;
-    background-color: var(--lighten-gray);
     border-left: 2px solid var(--primary-color);
 }
 
+pre, code {
+    background-color: var(--lighten-gray) !important;
+}
+
+pre code {
+    padding: 0 !important;
+}
+
+:not(pre) > code {
+    padding: 1px 6px;
+    border-radius: 5px;
+}
 button {
     padding: 0.5rem 1rem;
     border: none;
